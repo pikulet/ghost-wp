@@ -29,7 +29,7 @@ var fileName = "easy"
 var words []string
 
 func initWords() { 
-    file, err := os.Open("../easy")
+    file, err := os.Open(fileName)
     if err != nil {
         panic(err)
     }
