@@ -15,4 +15,4 @@ You can directly use the `easy` file, or make an API call to
 
 ## Deploying to Heroku
 
-Define the Procfile and run `go mod tidy`
+Before deploy, run `go mod tidy`
