@@ -11,7 +11,7 @@ please add more suggestions to the word pack, by making a pull request or creati
 
 You can directly use the `easy` file, or make an API call to 
 
-`ghost-wp.netlify.app`
+`ghost-wp.herokuapp.com`
 
 ## Deploying to Heroku
 
