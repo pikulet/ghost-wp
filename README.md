@@ -5,7 +5,7 @@ wanted a ghost game but not sure what words to go for?
 
 ## Contributing
 
-please add more suggestions to the word pack ^^
+please add more suggestions to the word pack, by making a pull request or creating an issue
 
 ## Usage
 
