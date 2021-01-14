@@ -2,6 +2,7 @@ package main
 
 import (
     "github.com/gin-gonic/gin"
+    "github.com/tjarratt/babble"
     
     "bufio"
     "os"
@@ -11,22 +12,32 @@ import (
 
 func main() {
     initWords()
+    initBabbler()
 
     r := gin.Default()
-    r.GET("/", index)
+    r.GET("/", pair)
+    r.GET("/splash", splash)
     r.Run()
 }
 
-func index(c* gin.Context) {
-    tWord, fWord := getRandomWords()
+func pair(c* gin.Context) {
+    tWord, fWord := getRandomPair()
     c.JSON(200, gin.H {
         "town"  : tWord,
         "fool"  : fWord,
     })
 }
 
+func splash(c* gin.Context) {
+    c.JSON(200, gin.H {
+        "splash"    : getRandomSplash(),
+    })
+}
+
 var fileName = "easy"
 var words []string
+
+var babbler = babble.NewBabbler() 
 
 func initWords() { 
     file, err := os.Open(fileName)
@@ -44,8 +55,17 @@ func initWords() {
     words = lines
 }
 
-func getRandomWords() (string, string) {
+func getRandomPair() (string, string) {
     index := rand.Intn(len(words))
     pick := strings.Split(words[index], ",")
     return pick[0], pick[1]
+}
+
+
+func initBabbler() {
+    babbler.Count = 10
+}
+
+func getRandomSplash() []string {
+    return strings.Split(babbler.Babble(), babbler.Separator)
 }
