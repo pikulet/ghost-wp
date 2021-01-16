@@ -1,11 +1,11 @@
-# ghost-wp
-just a wordpack since i couldn't find any around
+# Ghost Wordpack
+Just a wordpack since i couldn't find any around :) Ghost is a word game that involves hiding a secret word from a minority in the group. There will also be a second secret word, but this word is just a decoy.
 
-wanted a ghost game but not sure what words to go for? 
+In most Ghost games, players want a relation between the two words, for example antonyms or words in the same semantic field. As such, the repository aims to provide two related words for the Ghost game.
 
-## Contributing
+### Design
 
-please add more suggestions to the word pack, by making a pull request or creating an issue
+Currently, the word pairs are hard-coded in the `easy` file. In future, it would be nice to use Natural Language Processing to quickly decide on what a good word pair for the game would be.
 
 ## Usage
 
@@ -13,6 +13,10 @@ You can directly use the `easy` file, or make an API call to
 
 `ghost-wp.herokuapp.com`
 
-## Deploying to Heroku
+## Deployment
 
-Before deploy, run `go mod tidy`
+If you want to host your own wordpack server, this repository was configured to deploy with Heroku :)
+
+## Contributing
+
+I'd definitely look forward to suggestions for the word pack. You can make a pull request or create an issue. Due credit will be given!
