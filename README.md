@@ -18,3 +18,7 @@ You can directly use the `easy` file, or make an API call to
 ## :memo: Contributing
 
 I'd definitely look forward to suggestions for the word pack. You can make a pull request or create an issue. Due credit will be given!
+
+## :seedling: Extensions
+
+Currently working on a word splash the gives a few random words (with no relation). I'm looking for a random word generator for English words, but there aren't many around. I've played with https://github.com/tjarratt/babble but this gomod isn't compatible with hosting on a remote server. Do let me know if you have great suggestions.
