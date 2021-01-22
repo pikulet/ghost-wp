@@ -7,7 +7,11 @@ import (
     "math/rand"
 )
 
-func InitPairs(fileName string, words *[]string) { 
+var init = false
+var fileName = "easy"
+var words []string
+
+func InitPairs(fileName string) { 
     file, err := os.Open(fileName)
     if err != nil {
         panic(err)
@@ -20,7 +24,7 @@ func InitPairs(fileName string, words *[]string) {
     }
 }
 
-func GetRandomPair() (string, string) {
+func GetRandomPair() (string) {
     index := rand.Intn(len(words))
     pick := strings.Split(words[index], ",")
     return pick[0], pick[1]
