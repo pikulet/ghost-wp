@@ -7,7 +7,7 @@ import (
     "math/rand"
 )
 
-func InitPairs(filename string, *words []string) { 
+func InitPairs(filename string, words *[]string) { 
     file, err := os.Open(fileName)
     if err != nil {
         panic(err)
