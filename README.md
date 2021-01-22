@@ -13,7 +13,7 @@ If you want to host your own wordpack server, this repository was configured to 
 
 You can directly use the `easy` file, or make an API call to 
 
-`ghost-wp.herokuapp.com`
+`pikulet.herokuapp.com/ghost`
 
 ## :memo: Contributing
 
