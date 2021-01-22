@@ -11,9 +11,19 @@ If you want to host your own wordpack server, this repository was configured to 
 
 ## :firecracker: Usage
 
-You can directly use the `easy` file, or make an API call to 
+If you just need the words, you can directly use the `easy` file, or make an API call to 
 
 `pikulet.herokuapp.com/ghost`
+
+If you want to use this go mod, do
+
+`go get -u github.com/pikulet/ghost-wp`
+
+```
+import github.com/pikulet/ghost-wp
+...
+townWord, foolWord := ghostpack.GetRandomPair()
+```
 
 ## :memo: Contributing
 
