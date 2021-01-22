@@ -1,6 +1,8 @@
 package gpack
 
 import (
+    "fmt"
+
     "bufio"
     "os"
 
