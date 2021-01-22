@@ -7,11 +7,11 @@ import (
     "math/rand"
 )
 
-var init = false
+var isInit = false
 var fileName = "easy"
 var words []string
 
-func InitPairs(fileName string) { 
+func initPairs(fileName string) { 
     file, err := os.Open(fileName)
     if err != nil {
         panic(err)
@@ -25,6 +25,11 @@ func InitPairs(fileName string) {
 }
 
 func GetRandomPair() (string) {
+    if !isInit {
+        initPairs()
+        isInit = true
+    }
+
     index := rand.Intn(len(words))
     pick := strings.Split(words[index], ",")
     return pick[0], pick[1]
