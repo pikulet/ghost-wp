@@ -2,8 +2,8 @@ package main
 
 import (
     "github.com/gin-gonic/gin"
-    "github.com/tjarratt/babble"
-    
+wg  "github.com/zhexuany/wordGenerator"    
+
     "bufio"
     "os"
     "strings"
@@ -11,8 +11,9 @@ import (
 )
 
 func main() {
-    initWords()
-    initBabbler()
+    //gin.SetMode(ReleaseMode)
+
+    initPairs()
 
     r := gin.Default()
     r.GET("/", pair)
@@ -37,9 +38,7 @@ func splash(c* gin.Context) {
 var fileName = "easy"
 var words []string
 
-var babbler = babble.NewBabbler() 
-
-func initWords() { 
+func initPairs() { 
     file, err := os.Open(fileName)
     if err != nil {
         panic(err)
@@ -61,11 +60,7 @@ func getRandomPair() (string, string) {
     return pick[0], pick[1]
 }
 
-
-func initBabbler() {
-    babbler.Count = 10
-}
-
 func getRandomSplash() []string {
-    return strings.Split(babbler.Babble(), babbler.Separator)
+    // 5 words, max length 15
+    return wg.GetWords(5, 15)
 }
