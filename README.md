@@ -1,18 +1,24 @@
-# ghost-wp
-just a wordpack since i couldn't find any around
+# :ghost: Ghost Wordpack :ghost:
+Just a wordpack since I couldn't find any around :) 
 
-wanted a ghost game but not sure what words to go for? 
+Ghost is a word game that involves hiding a secret word from a minority in the group. There will also be a second secret word, but this word is just a decoy.
 
-## Contributing
+In most Ghost games, players want a relation between the two words, for example antonyms or words in the same semantic field. As such, the repository aims to provide two related words for the Ghost game.
 
-please add more suggestions to the word pack, by making a pull request or creating an issue
+Currently, the word pairs are hard-coded in the `easy` file. In future, it would be nice to use Natural Language Processing to quickly decide on what a good word pair for the game would be.
 
-## Usage
+If you want to host your own wordpack server, this repository was configured to deploy with Heroku :)
+
+## :firecracker: Usage
 
 You can directly use the `easy` file, or make an API call to 
 
 `ghost-wp.herokuapp.com`
 
-## Deploying to Heroku
+## :memo: Contributing
 
-Before deploy, run `go mod tidy`
+I'd definitely look forward to suggestions for the word pack. You can make a pull request or create an issue. Due credit will be given!
+
+## :seedling: Extensions
+
+Currently working on a word splash the gives a few random words (with no relation). I'm looking for a random word generator for English words, but there aren't many around. I've played with https://github.com/tjarratt/babble but this gomod isn't compatible with hosting on a remote server. Do let me know if you have great suggestions.
