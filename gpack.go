@@ -58,8 +58,7 @@ func SetFileName(name string) {
 
 func GetRandomPair() (string, string) {
     index := rand.Intn(len(words))
-    fmt.Println(len(words))
     pick := strings.Split(words[index], ",")
-    fmt.Println(len(words))
+    fmt.Println(pick)
     return pick[0], pick[1]
 }
