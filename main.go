@@ -3,6 +3,10 @@ package gpack
 import (
     "bufio"
     "os"
+
+    "net/http"
+    "io"
+
     "strings"
     "math/rand"
 )
