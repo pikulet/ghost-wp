@@ -7,7 +7,7 @@ import (
     "math/rand"
 )
 
-func InitPairs(filename string, words *[]string) { 
+func InitPairs(fileName string, words *[]string) { 
     file, err := os.Open(fileName)
     if err != nil {
         panic(err)
@@ -16,7 +16,7 @@ func InitPairs(filename string, words *[]string) {
 
     scanner := bufio.NewScanner(file)
     for scanner.Scan() {
-        words = append(words, scanner.Text())
+        *words = append(*words, scanner.Text())
     }
 }
 
