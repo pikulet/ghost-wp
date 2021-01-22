@@ -45,13 +45,10 @@ func initPairs() {
     }
     defer file.Close()
 
-    var lines []string
     scanner := bufio.NewScanner(file)
     for scanner.Scan() {
-        lines = append(lines, scanner.Text())
+        words = append(words, scanner.Text())
     }
-
-    words = lines
 }
 
 func getRandomPair() (string, string) {
