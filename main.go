@@ -7,6 +7,11 @@ import (
     "math/rand"
 )
 
+var fileName = "easy"
+
+// Downloads the wordpack from github.com/pikulet/ghost-wp.
+// The wordpack is saved in a file 'easy'.
+// Can be skipped if the user has a pre-defined wordpack
 func DownloadWords() error {
     fileURL := "https://github.com/pikulet/ghost-wp/easy"
     resp, err := http.Get(fileURL)
@@ -25,11 +30,10 @@ func DownloadWords() error {
     return err
 }
 
-var isInit = false
-var fileName = "easy"
 var words []string
 
-func initPairs() { 
+// Initialises the word list
+func Init() { 
     file, err := os.Open(fileName)
     if err != nil {
         panic(err)
@@ -47,11 +51,6 @@ func SetFileName(name string) {
 }
 
 func GetRandomPair() (string, string) {
-    if !isInit {
-        initPairs()
-        isInit = true
-    }
-
     index := rand.Intn(len(words))
     pick := strings.Split(words[index], ",")
     return pick[0], pick[1]
