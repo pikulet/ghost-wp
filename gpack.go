@@ -19,7 +19,7 @@ var fileName = "easy"
 // The wordpack is saved in a file 'easy'.
 // Can be skipped if the user has a pre-defined wordpack
 func DownloadWords() error {
-    fileURL := "https://github.com/pikulet/ghost-wp/easy"
+    fileURL := "https://raw.githubusercontent.com/pikulet/ghost-wp/master/easy"
     resp, err := http.Get(fileURL)
     if err != nil {
         return err
@@ -58,8 +58,6 @@ func SetFileName(name string) {
 
 func GetRandomPair() (string, string) {
     index := rand.Intn(len(words))
-    fmt.Println(words[index])
     pick := strings.Split(words[index], ",")
-    fmt.Println(pick)
     return pick[0], pick[1]
 }
