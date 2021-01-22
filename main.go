@@ -11,7 +11,7 @@ var isInit = false
 var fileName = "easy"
 var words []string
 
-func initPairs(fileName string) { 
+func initPairs() { 
     file, err := os.Open(fileName)
     if err != nil {
         panic(err)
@@ -20,11 +20,11 @@ func initPairs(fileName string) {
 
     scanner := bufio.NewScanner(file)
     for scanner.Scan() {
-        *words = append(*words, scanner.Text())
+        words = append(words, scanner.Text())
     }
 }
 
-func GetRandomPair() (string) {
+func GetRandomPair() (string, string) {
     if !isInit {
         initPairs()
         isInit = true
