@@ -47,7 +47,7 @@ func Init() {
 
     scanner := bufio.NewScanner(file)
     for scanner.Scan() {
-        words = append(words, scanner.Text())
+        words = append(words, strings.TrimSpace(scanner.Text())
     }
 }
 
