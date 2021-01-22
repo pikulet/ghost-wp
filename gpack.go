@@ -1,8 +1,6 @@
 package gpack
 
 import (
-    "fmt"
-
     "bufio"
     "os"
 
@@ -26,6 +24,7 @@ func DownloadWords() error {
     }
     defer resp.Body.Close()
 
+    os.Remove(fileName)
     out, err := os.Create(fileName)
     if err != nil {
         return err
