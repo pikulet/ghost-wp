@@ -1,4 +1,4 @@
-package ghostwords
+package gpack
 
 import (
     "bufio"
